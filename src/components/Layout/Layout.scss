@@ -1,0 +1,62 @@
+$primary: #177cb0;
+
+@import 'bootstrap/scss/bootstrap';
+
+.bi {
+  display: inline-block;
+  vertical-align: -0.125em;
+}
+
+@import 'github-markdown-css';
+
+.markdown-body {
+  a {
+    color: $primary;
+    &.anchorjs-link {
+      padding-left: 0.375em;
+      font-weight: 400;
+      color: rgba($primary, 0.5);
+      transition: color 0.15s ease-in-out;
+      text-decoration: none;
+      &:hover {
+        color: $primary;
+      }
+      &::after {
+        content: '#';
+      }
+    }
+  }
+  code {
+    color: #24292e;
+  }
+  h1,
+  h2 {
+    font-weight: 400;
+  }
+  hr {
+    opacity: 1;
+  }
+}
+
+.toc-body {
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  p {
+    margin-bottom: 0;
+  }
+  li {
+    margin-bottom: 4px;
+  }
+  ul {
+    padding-left: 0;
+    list-style: none;
+    ul {
+      padding-left: 1rem;
+      margin-top: 0.25rem;
+    }
+  }
+}

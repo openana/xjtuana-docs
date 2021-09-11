@@ -1,18 +1,19 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
+    title: `西交网管会开源文档平台 - 学生网络管理协会 - 西安交通大学`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    author: `@xjtuana`,
+    siteUrl: `https://docs.xjtuana.com/`,
   },
+  pathPrefix: '/',
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/content/docs`,
-        name: `docs`,
+        name: 'content',
+        path: `${__dirname}/content`,
       },
     },
     {
@@ -23,13 +24,27 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: `gatsby-plugin-mdx`,
       options: {
-        plugins: [
+        extensions: [`.md`, `.mdx`],
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-autolink-headers`,
+            options: {
+              offsetY: 0,
+              icon: `</>`,
+              className: `anchorjs-link`,
+              maintainCase: false,
+              removeAccents: false,
+              enableCustomId: true,
+              isIconAfterHeader: true,
+              elements: [`h1`, `h2`, `h3`, `h4`],
+            },
+          },
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 630,
+              maxWidth: 840,
             },
           },
         ],
@@ -52,6 +67,6 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     `gatsby-plugin-offline`,
+    `gatsby-plugin-sass`,
   ],
-  pathPrefix: "/",
-}
+};

@@ -1,0 +1,183 @@
+---
+title: 快速开始
+date: 2021-09-01T22:12:03.284Z
+description: 这是一个引导段。它从常规段落中脱颖而出。
+embeddedImagesLocal:
+  - quick-start/stu_10.6.11.8_login.png
+  - quick-start/stu_10.6.11.8_login_stu.png
+  - quick-start/stu_10.6.11.8_success.png
+  - quick-start/stu_10.6.11.8_device_list.png
+  - quick-start/xjtu_stu_p.xjtu.edu.cn_login.png
+  - quick-start/xjtu_stu_p.xjtu.edu.cn_success.png
+  - quick-start/xjtu_stu_p.xjtu.edu.cn_device_list.png
+  - quick-start/xjtu_stu_10.6.18.2_login.png
+---
+
+import { getImage, GatsbyImage } from 'gatsby-plugin-image';
+
+# 连接到校园网络
+
+## 先决条件
+
+- [ ] 激活 Netid
+- [ ] 完成入网缴费
+- [ ] 上网账号密码
+
+## 兴庆、雁塔校区
+
+### 学生区有线网络
+
+覆盖区域：兴庆、雁塔校区学生宿舍区
+
+有线网络：宿舍室内墙上的 RJ45 端口
+
+认证方式：PPPoE 拨号上网（教育网访问外网需要进行二次认证）
+
+外网认证网址：http://10.6.8.2:901/srun_portal_pc.php
+
+### 学生区无线网络
+
+覆盖区域：兴庆、雁塔校区学生宿舍区
+
+无线网络：STU
+
+认证方式：Portal 认证
+
+认证网址：http://10.6.11.8/login
+
+<!--
+<div className="d-inline">
+  <GatsbyImage
+    className="border"
+    alt="stu_10.6.11.8_login"
+    image={getImage(props.localImages[0])}
+    style={{ width: '240px' }}
+  />
+  <GatsbyImage
+    className="border"
+    alt="stu_10.6.11.8_login_stu"
+    image={getImage(props.localImages[1])}
+    style={{ width: '240px' }}
+  />
+  <GatsbyImage
+    className="border"
+    alt="stu_10.6.11.8_success"
+    image={getImage(props.localImages[2])}
+    style={{ width: '240px' }}
+  />
+  <GatsbyImage
+    className="border"
+    alt="stu_10.6.11.8_device_list"
+    image={getImage(props.localImages[3])}
+    style={{ width: '240px' }}
+  />
+</div> -->
+
+### 图书馆无线网络
+
+覆盖区域：兴庆校区图书馆馆内
+
+无线网络：xjtu_lib
+
+认证方式：Portal 认证
+
+认证网址：http://10.6.18.5:803/srun_portal_phone.php
+
+### 教学区无线网络
+
+覆盖区域：兴庆、雁塔校区教学区以及雁塔校区图书馆
+
+无线网络：XJTU_STU
+
+认证方式：Portal 认证
+
+认证网址：http://10.6.18.2/srun_portal_phone?ac_id=1&theme=basic
+
+<!--
+<div className="d-inline">
+  <GatsbyImage
+    className="border"
+    alt="xjtu_stu_10.6.18.2_login"
+    image={getImage(props.localImages[7])}
+    style={{ width: '240px' }}
+  />
+</div> -->
+
+## 创新港校区
+
+### 学生区有线网络
+
+覆盖区域：创新港校区学生宿舍区
+
+有线网络：宿舍室内墙上的 RJ45 端口
+
+认证方式：Portal 认证
+
+认证网址：[http://p.xjtu.edu.cn/login](http://p.xjtu.edu.cn/login)
+（备用网址 [http://10.184.6.32/login](http://10.184.6.32/login)）
+
+### 学生、教学区无线网络
+
+覆盖区域：创新港校区全覆盖
+
+无线网络：XJTU_STU / 与宿舍房间号一致的无线网络
+
+认证方式：Portal 认证
+
+认证网址：[http://p.xjtu.edu.cn/login](http://p.xjtu.edu.cn/login)
+（备用网址 [http://10.184.6.32/login](http://10.184.6.32/login)）
+
+<!--
+<div className="d-inline">
+  <GatsbyImage
+    className="border"
+    alt="xjtu_stu_p.xjtu.edu.cn_login"
+    image={getImage(props.localImages[4])}
+    style={{ width: '240px' }}
+  />
+  <GatsbyImage
+    className="border"
+    alt="xjtu_stu_p.xjtu.edu.cn_success"
+    image={getImage(props.localImages[5])}
+    style={{ width: '240px' }}
+  />
+  <GatsbyImage
+    className="border"
+    alt="xjtu_stu_p.xjtu.edu.cn_device_list"
+    image={getImage(props.localImages[6])}
+    style={{ width: '240px' }}
+  />
+</div> -->
+
+### 常见问题及处理方法
+
+#### Portal 认证时提示账号密码错误
+
+#### Portal 认证时提示其他未知错误
+
+问题描述：在进行有线或无线 Portal 认证时时出现 `无法弹出登陆页面` 或 `出现缺少必要的参数即将重定向` 等问题的解决办法
+
+解决方法：
+
+1. 打开浏览器，在地址栏中手动输入认证网址：[http://p.xjtu.edu.cn](http://p.xjtu.edu.cn)**（注意必须是 http 而不是 https）**；
+2. 若无法进入认证页面，则需要进一步检查 `DNS/IP` 地址是否配置错误（[查看 DNS 是否自动获取方法](http://ask.zol.com.cn/x/2495509.html)）：
+   1. 若 `DNS/IP` 不为自动获取：尝试将 `DNS/IP` 改为自动获取；
+   2. 若 `DNS/IP` 为自动获取：尝试手动断开 Wi-Fi 连接并重新打开 Wi-Fi 开关（若为有线网络，则需要重新插拔网线）；
+   3. 若仍无法进入认证页面：尝试在网络设置中进行重置网络并重启计算机。
+3. 若正常进入认证页面，
+
+## 测试你的网络连接
+
+### 校内测速站
+
+### 创新港辅助认证工具
+
+# 使用校园正版软件服务
+
+# 使用校园软件镜像服务
+
+# 使用校园 VPN 服务
+
+## WebVPN 服务
+
+## SSL VPN 服务

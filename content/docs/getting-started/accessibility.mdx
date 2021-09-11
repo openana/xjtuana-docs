@@ -1,0 +1,51 @@
+---
+title: 便捷使用
+date: 2021-09-01T22:12:03.284Z
+description: 这是一个引导段。它从常规段落中脱颖而出。
+embeddedImagesLocal:
+  - accessibility/xjtu.4fd396f5.png
+---
+
+在这里可以便捷的使用一些功能。
+
+# 测试功能 {#testing}
+
+Below is an example of JSX embedded in Markdown. <br /> **Try and change
+the background color!**
+
+<div style={{ padding: '20px', backgroundColor: 'tomato' }}>
+  <h3>This is JSX</h3>
+</div>
+
+## 模拟认证
+
+import { Button, Form } from 'react-bootstrap';
+import { getImage, GatsbyImage } from 'gatsby-plugin-image';
+
+<div className="border rounded p-3" style={{ width: '360px', height: '640px' }}>
+  <GatsbyImage
+    className="mx-auto mt-5 mb-4"
+    alt="some alt text"
+    image={getImage(props.localImages[0])}
+    style={{ width: '300px' }}
+  />
+  <div className="mt-2 mb-5 py-2 text-center fw-bold fs-2">校园网络认证</div>
+  <Form>
+    <Form.Group className="mb-4">
+      <Form.Control type="text" placeholder="请输入上网账号" />
+    </Form.Group>
+    <Form.Group className="mb-4">
+      <Form.Control type="password" placeholder="请输入密码" />
+    </Form.Group>
+    <Form.Group className="mb-4">
+      <Form.Select>
+        <option value="1">校园网</option>
+        <option value="2">中国移动</option>
+        <option value="3">中国联通</option>
+      </Form.Select>
+    </Form.Group>
+    <div className="d-grid gap-2">
+      <Button variant="primary">登 录</Button>
+    </div>
+  </Form>
+</div>
