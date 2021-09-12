@@ -28,6 +28,7 @@ module.exports = {
       options: {
         extensions: [`.md`, `.mdx`],
         gatsbyRemarkPlugins: [
+          `gatsby-remark-katex`,
           {
             resolve: `gatsby-remark-autolink-headers`,
             options: {
@@ -48,6 +49,16 @@ module.exports = {
             },
           },
         ],
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 960,
+              quality: 90,
+              linkImagesToOriginal: false,
+            },
+          },
+        ],
       },
     },
     `gatsby-transformer-sharp`,
@@ -58,8 +69,8 @@ module.exports = {
         name: `gatsby-starter-default`,
         short_name: `starter`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#177cb0`,
+        theme_color: `#177cb0`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },

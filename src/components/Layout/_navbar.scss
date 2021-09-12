@@ -1,0 +1,32 @@
+.app-navbar {
+  padding: 0.75rem 0;
+  background-color: $app-blue-bright;
+
+  .navbar-toggler {
+    padding: 0;
+    border: 0;
+  }
+
+  .navbar-nav {
+    .nav-link {
+      padding-right: $spacer * 0.25;
+      padding-left: $spacer * 0.25;
+      color: rgba($white, 0.85);
+
+      &:hover,
+      &:focus {
+        color: $white;
+      }
+
+      &.active {
+        font-weight: 600;
+        color: $white;
+      }
+    }
+  }
+
+  .navbar-nav-svg {
+    width: 1rem;
+    height: 1rem;
+  }
+}

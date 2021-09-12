@@ -1,0 +1,149 @@
+// Dev notes
+//
+// Background information on nomenclature and architecture decisions here.
+//
+// - Bootstrap functions, variables, and mixins are included for easy reuse.
+//   Doing so gives us access to the same core utilities provided by Bootstrap.
+//   For example, consistent media queries through those mixins.
+//
+// - Bootstrap's **docs variables** are prefixed with `$app-`.
+//   These custom colors avoid collision with the components Bootstrap provides.
+//
+// - Classes are prefixed with `.app-`.
+//   These classes indicate custom-built or modified components for the design
+//   and layout of the Bootstrap docs. They are not included in our builds.
+//
+// Happy Bootstrapping!
+
+$primary: #177cb0;
+
+// Configuration
+@import 'bootstrap/scss/functions';
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/mixins';
+@import 'bootstrap/scss/utilities';
+
+// Layout & components
+@import 'bootstrap/scss/root';
+@import 'bootstrap/scss/reboot';
+@import 'bootstrap/scss/type';
+@import 'bootstrap/scss/images';
+@import 'bootstrap/scss/containers';
+
+// fusv-disable
+$enable-grid-classes: false; // stylelint-disable-line scss/dollar-variable-default
+$enable-cssgrid: true; // stylelint-disable-line scss/dollar-variable-default
+// fusv-enable
+@import 'bootstrap/scss/grid';
+
+@import 'bootstrap/scss/tables';
+@import 'bootstrap/scss/forms';
+@import 'bootstrap/scss/buttons';
+@import 'bootstrap/scss/transitions';
+@import 'bootstrap/scss/dropdown';
+@import 'bootstrap/scss/button-group';
+@import 'bootstrap/scss/nav';
+@import 'bootstrap/scss/navbar';
+@import 'bootstrap/scss/card';
+@import 'bootstrap/scss/accordion';
+@import 'bootstrap/scss/breadcrumb';
+@import 'bootstrap/scss/pagination';
+@import 'bootstrap/scss/badge';
+@import 'bootstrap/scss/alert';
+@import 'bootstrap/scss/progress';
+@import 'bootstrap/scss/list-group';
+@import 'bootstrap/scss/close';
+@import 'bootstrap/scss/toasts';
+@import 'bootstrap/scss/modal';
+@import 'bootstrap/scss/tooltip';
+@import 'bootstrap/scss/popover';
+@import 'bootstrap/scss/carousel';
+@import 'bootstrap/scss/spinners';
+@import 'bootstrap/scss/offcanvas';
+@import 'bootstrap/scss/placeholders';
+
+// Customs
+@import 'variables';
+@import 'buttons';
+@import 'layout';
+@import 'navbar';
+@import 'sidebar';
+@import 'toc';
+
+// Helpers
+@import 'bootstrap/scss/helpers';
+
+// Utilities
+@import 'bootstrap/scss/utilities/api';
+
+.bi {
+  display: inline-block;
+  vertical-align: -0.125em;
+}
+
+@import 'github-markdown-css';
+
+.markdown-body {
+  a {
+    color: $link-color;
+
+    &.anchorjs-link {
+      display: none;
+      padding-left: 0.375em;
+
+      font-weight: 400;
+      color: rgba($link-color, 0.5);
+      @include transition(color 0.15s ease-in-out);
+
+      &:focus,
+      &:hover {
+        color: $link-color;
+        text-decoration: none;
+      }
+
+      &::after {
+        content: '#';
+      }
+    }
+  }
+
+  code {
+    color: #24292e;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    &:hover > .anchorjs-link {
+      display: inline;
+    }
+  }
+
+  hr {
+    opacity: 1;
+  }
+}
+
+.toc-body {
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  p {
+    margin-bottom: 0;
+  }
+  li {
+    margin-bottom: 4px;
+  }
+  ul {
+    padding-left: 0;
+    list-style: none;
+    ul {
+      padding-left: 1rem;
+      margin-top: 0.25rem;
+    }
+  }
+}

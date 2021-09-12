@@ -1,0 +1,40 @@
+items:
+  - title: 开始使用
+    url: /docs/getting-started/
+    items:
+      - title: 快速入门
+        url: /docs/getting-started/introduction.html
+      - title: 便捷使用
+        url: /docs/getting-started/accessibility.html
+      - title: 测试
+        url: /docs/getting-started/markdown-it.html
+  - title: 西交网管会手册
+    url: /docs/xjtuana-manual/
+    items:
+      - title: 快速开始（无效）
+        url: /docs/xjtuana-manual/quick-start.html
+  - title: 西交校园网络
+    url: /docs/xjtu-network/
+    items:
+      - title: 快速开始
+        url: /docs/xjtu-network/quick-start.html
+  - title: 西交软件镜像
+    url: /docs/xjtu-mirrors/
+    items:
+      - title: 快速开始（无效）
+        url: /docs/xjtu-mirrors/quick-start.html
+  - title: 西交正版软件
+    url: /docs/xjtu-genuine/
+    items:
+      - title: 快速开始（无效）
+        url: /docs/xjtu-genuine/quick-start.html
+  - title: 官方服务指南
+    url: /docs/xjtu-official/
+    items:
+      - title: 快速开始（无效）
+        url: /docs/xjtu-official/quick-start.html
+  - title: 非官方服务指南
+    url: /docs/xjtu-unofficial/
+    items:
+      - title: 快速开始（无效）
+        url: /docs/xjtu-unofficial/quick-start.html
