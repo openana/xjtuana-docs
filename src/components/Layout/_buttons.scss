@@ -1,0 +1,55 @@
+// Buttons
+//
+// Custom buttons for the docs.
+
+.btn-app-primary {
+  font-weight: 600;
+  color: $white;
+  background-color: $app-blue-bright;
+  border-color: $app-blue-bright;
+
+  &:hover,
+  &:active {
+    color: $white;
+    background-color: shade-color($app-blue-bright, 20%);
+    border-color: shade-color($app-blue-bright, 20%);
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 3px rgba($app-blue-bright, 0.25);
+  }
+}
+
+.btn-app-download {
+  font-weight: 600;
+  color: $app-download;
+  border-color: $app-download;
+
+  &:hover,
+  &:active {
+    color: $app-dark;
+    background-color: $app-download;
+    border-color: $app-download;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 3px rgba($app-download, 0.25);
+  }
+}
+
+.btn-app-light {
+  color: $gray-600;
+  border-color: $gray-300;
+
+  .show > &,
+  &:hover,
+  &:active {
+    color: $app-blue-bright;
+    background-color: $white;
+    border-color: $app-blue-bright;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 3px rgba($app-blue-bright, 0.25);
+  }
+}

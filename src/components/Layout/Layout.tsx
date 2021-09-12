@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import Header from '../LayoutHeader';
 
-import './Layout.scss';
+import './index.scss';
 
 type DataProps = {
   children: any;
@@ -11,10 +11,10 @@ type DataProps = {
 
 const Layout: React.FC<DataProps> = ({ children, location }) => {
   return (
-    <div>
+    <>
       <Header location={location} />
       {children}
-    </div>
+    </>
   );
 };
 
